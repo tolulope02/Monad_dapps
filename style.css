@@ -1,0 +1,27 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0E2148;
+            padding: 20px;
+        }
+.grid-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Default mobile-first layout (1 column) */
+.grid-container {
+  grid-template-columns: 1fr;
+}
+
+/* Grid item styling (optional) */
+.grid-item {
+  /* background-color: #f0f0f0; */
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
