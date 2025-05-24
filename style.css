@@ -1,7 +1,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #E3D095;
+            background:#483AA0;
             padding: 20px;
         }
 .grid-container {
@@ -10,7 +10,7 @@
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
-  color:white;
+  color:#FAF6E9;
 }
 
 /* Default mobile-first layout (1 column) */
