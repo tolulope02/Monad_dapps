@@ -1,16 +1,137 @@
 
         body {
-            font-family: Arial, sans-serif;
-            background:#483AA0;
-            padding: 20px;
+            /* font-family: Arial, sans-serif;
+            background: #E3D095;
+            padding: 20px; */
+
+
+
+           font-family: 'Roboto', Arial, sans-serif;
+    background: #483AA0;
+    padding: 20px;
+    
         }
+
+        h2 {
+    color: #FAF6E9;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+}
+
 .grid-container {
-  display: grid;
+  /* display: grid;
   gap: 20px;
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
-  color:#FAF6E9;
+  color: white; */
+
+  
+    display: grid;
+    gap: 25px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #FAF6E9;
+}
+
+/* Default mobile-first layout (1 column) */
+.grid-container {
+    grid-template-columns: 1fr;
+}
+
+/* Tablet layout (2 columns) */
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop layout (3 columns) */
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Beautiful Grid Item Styling */
+.grid-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #6e8efb, #a777e3, #6e8efb);
+    z-index: -1;
+    border-radius: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.grid-item:hover::before {
+    opacity: 0.3;
+}
+
+/* Link Styling */
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #FAF6E9;
+    height: 100%;
+}
+
+.icon-link img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.icon-link div {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.grid-item:hover .icon-link img {
+    transform: scale(1.1);
+}
+
+.grid-item:hover .icon-link div {
+    color: #fff;
+    font-weight: 400;
+}
+
+a{
+  font-style: italic;
+  
+  
 }
 
 /* Default mobile-first layout (1 column) */
